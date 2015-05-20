@@ -4,9 +4,10 @@
 
 <% @bookmarks.reverse.each do |bookmark| %>
 
+	<p>Posted by: <%= bookmark.user.firstName %></p>
 	<p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
-	<p><%= bookmark.description %></p>
-	  <img src="<%= bookmark.image %>", width="500" height="100%">
+	<p><%= bookmark.description %></p>, <%= link_to "Delete", bookmark, method: :delete, data: {confirm: "Are you sure you want to delete this bookmark?"}  %>
+	  <a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>", width="300" height="100%"></a>
 
 
 <% end %>
