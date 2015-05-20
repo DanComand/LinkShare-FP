@@ -1,7 +1,10 @@
 class BookmarksController < ApplicationController
-  before_filter :ensure_logged_in, only: [:create, :destroy]
+  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
+  
+
   def index
-  	@bookmarks = Bookmark.all
+  	@bookmarks = Bookmark.where(user_id: current_user.id)
+
   end
 
   def show
@@ -18,6 +21,11 @@ class BookmarksController < ApplicationController
 
   def create
   	@bookmark = Bookmark.new(bookmark_params)
+    @bookmark.user_id = current_user.id
+
+    meta = MetaInspector.new(@bookmark.url)
+    @bookmark.title = meta.title
+
   	if @bookmark.save
   		redirect_to bookmarks_url
   	else

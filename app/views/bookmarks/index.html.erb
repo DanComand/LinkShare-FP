@@ -2,9 +2,11 @@
 
 <%= render 'form' %>
 
-<% @bookmarks.reverse.each do |b| %>
+<% @bookmarks.reverse.each do |bookmark| %>
 
-	<p><a href="<%= b.url %>" target="_blank"><%= b.url %></a></p>
-	<p><%= b.description %></p>
+	<p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.url %></a></p>
+	<p><%= bookmark.description %></p>
+	<p><%= bookmark.title %></p>
+
 <% end %>
 
