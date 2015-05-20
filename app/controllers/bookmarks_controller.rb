@@ -4,7 +4,6 @@ class BookmarksController < ApplicationController
 
   def index
   	@bookmarks = Bookmark.where(user_id: current_user.id)
-
   end
 
   def show
@@ -25,7 +24,7 @@ class BookmarksController < ApplicationController
 
     meta = MetaInspector.new(@bookmark.url)
     @bookmark.title = meta.title
-    @bookmark.image = meta.images
+    @bookmark.image = meta.images.best
 
   	if @bookmark.save
   		redirect_to bookmarks_url
