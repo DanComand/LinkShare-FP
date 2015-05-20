@@ -7,9 +7,15 @@ class ApplicationController < ActionController::Base
 
  def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
+ end
 
   	helper_method :current_user
 
+  	def ensure_logged_in
+  		unless current_user
+  			flash[:alert] = "Thanks for checking out LinkShare. Please log in to add bookmarks."
+  			redirect_to new_session_path
+  		end
+  	end
 
 end
