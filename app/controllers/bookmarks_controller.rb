@@ -25,6 +25,7 @@ class BookmarksController < ApplicationController
 
     meta = MetaInspector.new(@bookmark.url)
     @bookmark.title = meta.title
+    @bookmark.image = meta.images
 
   	if @bookmark.save
   		redirect_to bookmarks_url
