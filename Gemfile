@@ -29,7 +29,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'metainspector'
 
 gem 'carrierwave'
+gem 'fog-aws'
+
 gem 'mini_magick'
+
+gem 'figaro'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -41,7 +45,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'pry-rails'
+  gem 'favorite_things'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
