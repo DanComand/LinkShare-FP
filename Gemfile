@@ -25,10 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'better_errors'
 gem 'metainspector'
 
-gem 'carrierwave'
+gem 'carrierwave', :git => 'git@github.com:carrierwaveuploader/carrierwave.git'
 gem 'fog-aws'
 
 gem 'mini_magick'

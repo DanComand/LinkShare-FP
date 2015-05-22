@@ -3,12 +3,17 @@ class BookmarksController < ApplicationController
   
 
   def index
-  	@bookmarks = Bookmark.where(user_id: current_user.id)
+  	@bookmarks = Bookmark.where(user: current_user).order(created_at: :desc)
   end
 
-  def show
-  	@bookmark = Bookmark.find(params[:id])
-  end
+  # def show
+  # 	@bookmark = Bookmark.find(params[:id])
+
+  #   if current_user
+  #     # @note = @bookmark.notes.build 
+  #     @note = Note.new
+  #   end
+  # end
 
   def new
   	@bookmark = Bookmark.new
