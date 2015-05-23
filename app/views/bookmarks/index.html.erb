@@ -1,4 +1,4 @@
-<h1>New Bookmark</h1>
+<h1>New Bookmark</h1> 
 
 <%= render 'form' %>
 
@@ -8,12 +8,12 @@
 <div class="bookmark-content">
 	
 
-	<p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
-	<p>Posted by: <%= bookmark.user.firstName %><img src="<%= bookmark.user.avatar.thumb %>" ></p>
-
-	
-	<a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>", width="300" height="100%"></a><br>
+	<p>Posted by: <%= bookmark.user.firstName %>
+		<img src="<%= bookmark.user.avatar.fifty %>"></p>
+		<p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a><br>
+		<a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>", width="300" height="100%"></a></p>
 	<p><%= bookmark.description %></p> 
+
 
 	<%= form_for([bookmark, Note.new]) do |f| %>
 
@@ -27,23 +27,20 @@
 
 	<% end %>
 
-	<h3>Comments</h3>
-	<p>Comments for: <%= bookmark.title %></p>
-	<% bookmark.notes.each do |note| %>
+	<% bookmark.notes.reverse.each do |note| %>
 	<p>
-		<%= note.comment %>
-		<br>
+		<img src="<%= bookmark.user.avatar.thumb %>"> <%= note.comment %></p>
+
 
 		<% if note.user != nil %>
-		<em> by <%= note.user.firstName %></em>
-		Added on: <%= note.created_at %>
+		<!-- <em> by <%= note.user.firstName %></em> -->
+		<!-- Added on: <%= note.created_at %> -->
 		<% end %>
 	</p>
 	<% end %>
 
 
-	<%= link_to "Delete", bookmark, method: :delete, data: {confirm: "Are you sure you want to delete this bookmark?"}  %>
-</div>
+	<%= link_to "Delete", bookmark, method: :delete, data: {confirm: "Are you sure you want to delete this bookmark?"}  %></div>
 <% end %>
 
 

@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p class="userinfo">
+	<% if current_user %>
+		Signed in as <%= current_user.firstName %>.
+		<%= link_to "Log Out", session_path("current"), :method => :delete %>
+		<% else %>
+		<%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
+		<% end %>
 
 <% if flash[:notice] %>
 	<p id="notice"><%= flash[:notice] %></p>
@@ -17,13 +24,7 @@
 
 <%= yield %>
 
-<p class="userinfo">
-	<% if current_user %>
-		Signed in as <%= current_user.firstName %>.
-		<%= link_to "Log Out", session_path("current"), :method => :delete %>
-		<% else %>
-		<%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
-		<% end %>
+
 
 </body>
 </html>
