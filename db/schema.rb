@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525181035) do
+ActiveRecord::Schema.define(version: 20150525204111) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string   "url"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150525181035) do
     t.datetime "updated_at",  null: false
     t.string   "title"
     t.string   "image"
+    t.integer  "list_id"
   end
 
   create_table "lists", force: :cascade do |t|

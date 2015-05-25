@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 	  root 'bookmarks#index'
 
 	  resources :lists do
-	 	resources :bookmarks do
-	 		resources :notes, only: [:show, :create, :destory]
+	 		resources :bookmarks, shallow: true do
+	 			resources :notes, only: [:show, :create, :destory], shallow: true
 		end
 	end
 end

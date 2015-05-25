@@ -3,6 +3,6 @@
 
 <% @list.each do |list| %>
 
-<%= list.name %>
+<%= link_to list.name, "/lists/#{list.id}" %> 
 
 <% end %>

@@ -24,7 +24,8 @@ class BookmarksController < ApplicationController
   end
 
   def create
-  	@bookmark = Bookmark.new(bookmark_params)
+    @list = List.find(params[:list_id])
+  	@bookmark = @list.bookmarks.build(bookmark_params)
     @bookmark.user_id = current_user.id
 
     meta = MetaInspector.new(@bookmark.url)
@@ -33,7 +34,7 @@ class BookmarksController < ApplicationController
 
   	if @bookmark.save
 
-  		redirect_to bookmarks_url
+  		redirect_to list_bookmarks_url(@list)
   	else
   		render :new
   	end
