@@ -23,6 +23,7 @@ html, body{
 	nav {
 
 	border: 1px solid black;
+	padding-left: 30px;
 
 	}
 
@@ -54,14 +55,14 @@ input {
 
 *:focus {
 
-    outline-color: blue;
+    outline-color: grey;
     outline-width: 3px;
 }
 
 
+.login-form {
 
+text-align: center
 
-
-
-
+}
 
