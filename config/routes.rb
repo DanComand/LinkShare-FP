@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show, :destroy]
+	  resources :sessions, only: [:new, :create, :destroy]
+	  resources :users, only: [:new, :create, :show, :destroy]
 
-  root 'bookmarks#index'
+	  root 'bookmarks#index'
 
- 	resources :bookmarks do
- 		resources :notes, only: [:show, :create, :destory]
+	  resources :lists do
+	 	resources :bookmarks do
+	 		resources :notes, only: [:show, :create, :destory]
+		end
 	end
 end

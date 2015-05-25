@@ -3,7 +3,7 @@ class BookmarksController < ApplicationController
   
 
   def index
-  	@bookmarks = Bookmark.where(user: current_user).order(created_at: :desc)
+  	@bookmarks = current_user.bookmarks.order(created_at: :desc)
   end
 
   # def show
@@ -32,6 +32,7 @@ class BookmarksController < ApplicationController
     @bookmark.image = meta.images.best
 
   	if @bookmark.save
+
   		redirect_to bookmarks_url
   	else
   		render :new
