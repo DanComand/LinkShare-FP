@@ -34,7 +34,7 @@ class BookmarksController < ApplicationController
 
   	if @bookmark.save
 
-  		redirect_to list_bookmarks_url(@list)
+  		redirect_to list_url(@list)
   	else
   		render :new
   	end
@@ -43,7 +43,7 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to list_bookmarks_url(@bookmark.list)
+    redirect_to list_url(@bookmark.list)
   end
 
   def update
