@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = current_user.bookmarks.order(created_at: :desc)
   end
 
   def new
