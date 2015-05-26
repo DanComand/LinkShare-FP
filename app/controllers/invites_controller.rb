@@ -7,6 +7,7 @@ class InvitesController < ApplicationController
   end
 
   def new
+    @list = List.find params[:list_id]
   	@invite = Invite.new
   end
 
@@ -15,5 +16,10 @@ class InvitesController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+  def invite_params
+    params.require(:invite).permit(:email, :list_id, :user_id)
   end
 end
