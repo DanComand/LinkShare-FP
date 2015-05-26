@@ -12,7 +12,16 @@ class InvitesController < ApplicationController
   end
 
   def create
-  	
+  	@list = List.find(params[:list_id])
+    @invite = @list.invites.build(invite_params)
+    @invite.user_id = current_user.id
+
+    if @invite.save
+
+      redirect_to list_url(@list)
+    else
+      render :new
+    end
   end
 
   def edit

@@ -6,11 +6,10 @@ Rails.application.routes.draw do
 	  root 'lists#index'
 
 	  resources :lists do
-	  	resources :invites do
-	 			resources :bookmarks, shallow: true do
-	 				resources :notes, only: [:show, :create, :destory], shallow: true
+	  	resources :invites
+			resources :bookmarks, shallow: true do
+	 			resources :notes, only: [:show, :create, :destory], shallow: true
 	 		end
-		end
 	end
 
 	resources :invites, only: [:show]
