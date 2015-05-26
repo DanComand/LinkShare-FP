@@ -12,10 +12,10 @@ html, body{
 
 .bookmark-content {
 
-	border: 1px solid black;
+	border-top: 1px solid black;
 	width: 100%;
 	height: 100%;
-	padding-left: 20px;
+	padding: 20px;
 
 
 	}
@@ -40,11 +40,30 @@ p, a, h1, .field {
 
 input[type="submit"] {
 
-background: rgb(28, 184, 65); /* this is a green */
-border-radius: 5px;
-border: none;
+background: white;
+/*border-radius: 5px;*/
+border: 1px solid black;
 box-shadow: none;
+width: 100px;
+height: 30px;
+font-size: 100%;
 }
+
+input[type="submit"]:hover {
+
+background: black;
+/*border-radius: 5px;*/
+border: 1px solid black;
+box-shadow: none;
+width: 100px;
+height: 30px;
+font-size: 100%;
+color: white;
+}
+
+
+
+
 
 input {
 
@@ -63,6 +82,15 @@ input {
 .login-form {
 
 text-align: center
+
+}
+
+.welcome {
+
+	text-align: center;
+
+
+
 
 }
 

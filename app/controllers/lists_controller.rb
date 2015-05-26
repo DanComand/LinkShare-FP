@@ -1,4 +1,8 @@
 class ListsController < ApplicationController
+
+
+
+
   def index
     @list = current_user.lists
   end

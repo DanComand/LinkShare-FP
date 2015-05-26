@@ -1,0 +1,20 @@
+<h1>Invites#new</h1>
+<p>Find me in app/views/invites/new.html.erb</p>
+
+<p>Enter the email of the person you'd like to share bookmarks with</p>
+
+<%= form_for [@list, Bookmark.new] do |f| %>
+<div class="login-form">
+
+<div class="field">
+	<%= f.label :email %><br>
+	<%= f.text_field :email %>
+</div>
+
+<div class="actions">
+	<%= f.submit "Invite" %>
+</div>
+
+<% end %>
+
+</div>

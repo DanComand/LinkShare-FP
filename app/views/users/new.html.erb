@@ -1,55 +1,58 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
 
-<h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-	<% if @user.errors.any? %>
-		<div class="errors_messages">
-		<h2>Form is invalid</h2>
-			<ul>
-			<% for message in @user.errors.full_messages %>
-				<li><%= message %></li>
-			<% end %>
-			</ul>
-		</div>
+<div class="welcome">
+	<h1>Welcome To LinkShare</h1>
+
+	<h1>Sign Up</h1>
+
+	<%= form_for @user do |f| %>
+		<% if @user.errors.any? %>
+			<div class="errors_messages">
+			<h2>Form is invalid</h2>
+				<ul>
+				<% for message in @user.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+	<div class="field">
+			<%= f.label :firstName %><br>
+			<%= f.text_field :firstName %>
+	</div>
+
+	<div class="field">
+			<%= f.label :lastName %><br>
+			<%= f.text_field :lastName %>
+	</div>
+
+	<div class="field">
+			<%= f.label :email %><br>
+			<%= f.text_field :email %>
+	</div>
+
+	<div class="field">
+			<%= f.label :password %><br>
+			<%= f.password_field :password %>
+	</div>
+
+	<div class="field">
+			<%= f.label :password_confirmation %><br>
+			<%= f.password_field :password_confirmation %>
+	</div>
+
+
+	<div class="field">
+		<%= f.label :avatar %><br>
+		<%= f.file_field :avatar %>
+	</div>
+
+	<div class="actions"><br><%= f.submit %></div>
+
+
 	<% end %>
-<div class="field">
-		<%= f.label :firstName %><br>
-		<%= f.text_field :firstName %>
+
 </div>
-
-<div class="field">
-		<%= f.label :lastName %><br>
-		<%= f.text_field :lastName %>
-</div>
-
-<div class="field">
-		<%= f.label :email %><br>
-		<%= f.text_field :email %>
-</div>
-
-<div class="field">
-		<%= f.label :password %><br>
-		<%= f.password_field :password %>
-</div>
-
-<div class="field">
-		<%= f.label :password_confirmation %><br>
-		<%= f.password_field :password_confirmation %>
-</div>
-
-
-<div class="field">
-	<%= f.label :avatar %><br>
-	<%= f.file_field :avatar %>
-</div>
-
-<div class="actions"><%= f.submit %></div>
-
-
-<% end %>
-
 
 
 
