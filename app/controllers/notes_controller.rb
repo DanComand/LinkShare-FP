@@ -15,10 +15,13 @@ class NotesController < ApplicationController
 
 
   	if @note.save
-      redirect_to lists_url(@list)
+      redirect_to list_path(@bookmark.list)
   	else
       flash.now[:alert] = "Comment not saved!"
-  		render 'bookmarks/index'
+  		
+      @list = @bookmark.list
+      @bookmarks = @list.bookmarks.order(created_at: :desc)
+      render 'lists/show'
   	end
   end
 

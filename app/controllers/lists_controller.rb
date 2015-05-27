@@ -8,7 +8,6 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks.order(created_at: :desc)
-    
   end
 
   def new
