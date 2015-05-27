@@ -8,6 +8,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks.order(created_at: :desc)
+    
   end
 
   def new
@@ -35,6 +36,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     unless Invite.where(email: current_user.email).find_by_list_id(params[:id]) or @list.user == current_user
       redirect_to lists_url
+  
     end
   end
 end

@@ -44,7 +44,7 @@ background: white;
 /*border-radius: 5px;*/
 border: 1px solid black;
 box-shadow: none;
-width: 100px;
+
 height: 30px;
 font-size: 100%;
 }
@@ -55,7 +55,7 @@ background: black;
 /*border-radius: 5px;*/
 border: 1px solid black;
 box-shadow: none;
-width: 100px;
+
 height: 30px;
 font-size: 100%;
 color: white;

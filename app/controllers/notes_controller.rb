@@ -15,7 +15,7 @@ class NotesController < ApplicationController
 
 
   	if @note.save
-      redirect_to list_bookmarks_url(@bookmark.list)
+      redirect_to lists_url(@list)
   	else
       flash.now[:alert] = "Comment not saved!"
   		render 'bookmarks/index'

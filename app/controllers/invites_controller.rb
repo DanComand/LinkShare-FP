@@ -17,7 +17,6 @@ class InvitesController < ApplicationController
     @invite.user_id = current_user.id
 
     if @invite.save
-
       redirect_to list_url(@list)
     else
       render :new

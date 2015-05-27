@@ -30,12 +30,13 @@
 	<% end %>
 
 	<% bookmark.notes.reverse.each do |note| %>
-	<p>
-		<img src="<%= bookmark.user.avatar.thumb %>"> <%= note.comment %></p>
+	<p><%= note.comment %></p>
+		<img src="<%= note.user.avatar.thumb %>">
+
 
 
 		<% if note.user != nil %>
-		<!-- <em> by <%= note.user.firstName %></em> -->
+		<em> by <%= note.user.firstName %></em>
 		<!-- Added on: <%= note.created_at %> -->
 		<% end %>
 	</p>
