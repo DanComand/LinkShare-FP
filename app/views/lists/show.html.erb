@@ -1,5 +1,11 @@
-<%= render 'bookmarks/form' %>
 
+	<div class="bookmark-form">
+		<%= render 'bookmarks/form' %>
+	</div>
+
+	<div class="invite-form">
+		<%= render 'invites/form' %>
+	</div>
 
 
 <% @bookmarks.each do |bookmark| %>
@@ -28,11 +34,10 @@
 		</div>
 
 	<% end %>
-
+	<br>
 	<% bookmark.notes.reverse.each do |note| %>
-	<p><%= note.comment %></p>
-		<img src="<%= note.user.avatar.thumb %>">
 
+		<p><img src="<%= note.user.avatar.thumb %>"><%= note.comment %>
 
 
 		<% if note.user != nil %>

@@ -1,5 +1,5 @@
 <%= form_for [@list, Bookmark.new] do |f| %>
-<div class="login-form">
+
 
 <div class="field">
 	<%= f.label :bookmark %><br>
@@ -10,11 +10,10 @@
 	<%= f.label :description %><br>
 	<%= f.text_field :description %>
 </div>
-
+<br>
 <div class="actions">
 	<%= f.submit "Add Link" %>
 </div>
 
 <% end %>
 
-</div>
