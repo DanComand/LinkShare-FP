@@ -20,6 +20,7 @@ html, body{
 	padding: 20px;
 	float: right;
 
+
 	}
 
 .list-nav {
@@ -42,6 +43,11 @@ html, body{
 	font-family: "Roboto";
 	font-weight: 100;
 
+	}
+
+	.nav, a {
+
+		color: white;
 	}
 
 .userinfo {
@@ -131,12 +137,11 @@ padding-top: 20px;
 float: right;
 }
 
-/*.header-forms {
-border: 2px solid grey;
-height: 100%;
-padding-left: 50px;
-padding-right: 50px;
-}*/
+.bookmark-url {
+
+	color: red;
+
+}
 
 
 

@@ -12,9 +12,16 @@
 	
 
 	<p>Posted by: <%= bookmark.user.firstName %>
-		<img src="<%= bookmark.user.avatar.fifty %>"></p>
-		<p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a><br>
-		<a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>", width="300" height="100%"></a></p>
+		<img src="<%= bookmark.user.avatar.fifty %>">
+	</p>
+
+	<p>
+
+	<%= link_to, bookmark.title %>
+		<a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a><br>
+		<a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>", width="300" height="100%"></a>
+	</p>
+	
 	<p><%= bookmark.description %></p> 
 
 
