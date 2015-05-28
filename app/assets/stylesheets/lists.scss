@@ -1,3 +1,94 @@
-// Place all the styles related to the lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.bookmark-content {
+
+  border-top: 2px solid black;
+  text-align: left;
+  height: 100%;
+  padding: 20px;
+  margin-top: 60px;
+  background-color: rgba(244, 244, 244, 1);
+
+
+
+
+  }
+
+.list-nav {
+
+  float: left;
+  width: 200px;
+  height: 1000px;
+  background-color: #616161;
+
+
+}
+
+  .nav {
+
+  border: 1px solid black;
+  padding-left: 30px;
+  background-color: #424242;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto";
+  font-weight: 100;
+
+  }
+
+  .nav a {
+
+    color: white;
+  }
+
+.userinfo {
+  margin-left: 30px;
+  margin-right: 30px;
+  float: right;
+  color: white;
+}
+
+
+.login-form {
+
+text-align: center
+
+}
+
+.welcome {
+
+  text-align: center;
+}
+
+.bookmark-form {
+/*margin-left: 320px;*/
+float: left;
+padding-top: 20px;
+text-align: center;
+/*border: 2px solid black;*/
+/*padding-left: 400px;*/
+
+}
+
+
+.invite-form {
+padding-right: 30px;
+padding-top: 20px;
+float: right;
+}
+
+.bookmark-url a:visited {
+
+color: black;
+
+}
+
+.field {
+
+  display: inline-block;
+}
+
+
+

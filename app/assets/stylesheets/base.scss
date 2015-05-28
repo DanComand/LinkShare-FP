@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background-color: #e0e0e0;
+}
+
+img {
+  max-width: 100%;
+}
+
+p, a, h1, .field {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+/*a:visited {
+
+  color: white;
+}*/
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  background: white;
+  border: 1px solid black;
+  box-shadow: none;
+
+  height: 30px;
+  font-size: 100%;
+}
+
+input[type="submit"]:hover {
+  background: black;
+  color: white;
+}
+
+input {
+  box-shadow: none;
+}
+
+*:focus {
+  outline-width: 3px;
+}
