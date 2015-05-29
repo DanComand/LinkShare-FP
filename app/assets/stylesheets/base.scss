@@ -16,15 +16,20 @@ html, body{
   font: inherit;
   vertical-align: baseline;
   background-color: #e0e0e0;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
+label {
+  display: block;
+}
+
 p, a, h1, .field {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
+  display: inline-block;
 }
 
 /*a:visited {
@@ -56,4 +61,13 @@ input {
 
 *:focus {
   outline-width: 3px;
+}
+
+nav.submenu {
+  overflow: auto;
+  display: inline;
+  margin-left: 50%;
+  margin-right: 50%;
+
+
 }

@@ -2,29 +2,48 @@
 
 
 
-.bookmark-content {
-
+.bookmark-list {
   border-top: 2px solid black;
   text-align: left;
   height: 100%;
   padding: 20px;
   margin-top: 60px;
   background-color: rgba(244, 244, 244, 1);
-
-
-
-
-  }
-
-.list-nav {
-
-  float: left;
-  width: 200px;
-  height: 1000px;
-  background-color: #616161;
-
-
 }
+
+.bookmark {
+  text-align: center;
+  margin-bottom: 3em;
+  border-top: 8px solid black;
+  background-color: white;
+  padding: 1em;
+}
+
+.bookmark-content {
+  margin-bottom: 1.5em;
+}
+
+.bookmark-user {
+  font-weight: 900;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.bookmark-posted {
+  margin-bottom: 0.5em;
+}
+
+
+
+// .list-nav {
+
+//   float: left;
+//   width: 200px;
+//   height: 1000px;
+//   background-color: #616161;
+
+
+// }
 
   .nav {
 
@@ -64,7 +83,7 @@ text-align: center
 
 .bookmark-form {
 /*margin-left: 320px;*/
-float: left;
+
 padding-top: 20px;
 text-align: center;
 /*border: 2px solid black;*/
@@ -74,9 +93,10 @@ text-align: center;
 
 
 .invite-form {
-padding-right: 30px;
+
 padding-top: 20px;
-float: right;
+text-align: center;
+
 }
 
 .bookmark-url a:visited {
@@ -85,10 +105,14 @@ color: black;
 
 }
 
-.field {
+ul {
 
-  display: inline-block;
+  list-style: none;
 }
 
-
-
+.comment-box {
+  width: 100%;
+  height: 3em;
+  font-size: 1.1em;
+  margin: 0.5em 0px;
+}
