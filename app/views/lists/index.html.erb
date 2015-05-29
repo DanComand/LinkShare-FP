@@ -18,10 +18,10 @@
 	<% end %>
 
 <div class="list-each">
-		<% @list.each do |list| %>
+		<% @list.each do |list| %><br>
 
 
-		<p><%= link_to list.name, "/lists/#{list.id}" %></p>
+		<%= link_to list.name, "/lists/#{list.id}" %>
 
 		<% end %>
 
