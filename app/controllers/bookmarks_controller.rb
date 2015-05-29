@@ -31,7 +31,7 @@ class BookmarksController < ApplicationController
     meta = MetaInspector.new(@bookmark.url)
     @bookmark.title = meta.title
     @bookmark.image = meta.images.best
-
+    @bookmark.summary = meta.description
 
   	if @bookmark.save
 

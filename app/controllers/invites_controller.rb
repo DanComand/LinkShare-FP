@@ -1,6 +1,8 @@
 class InvitesController < ApplicationController
   def index
-  	@invites = Invite.all
+  	# @invites = Invite.all
+    @lists = Invite.where(email: current_user.email).map{|x| x.list }
+    # binding.pry
   end
 
   def show

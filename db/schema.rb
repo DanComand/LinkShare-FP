@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526200005) do
+ActiveRecord::Schema.define(version: 20150529185832) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string   "url"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150526200005) do
     t.string   "title"
     t.string   "image"
     t.integer  "list_id"
+    t.string   "summary"
   end
 
   create_table "invites", force: :cascade do |t|
