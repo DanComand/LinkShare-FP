@@ -21,8 +21,9 @@
   margin: 0 auto;
 }
 
-.bookmark-content {
+.bookmark-content a {
   margin-bottom: 1.5em;
+  color: black;
 }
 
 .bookmark-user {
@@ -117,14 +118,13 @@ ul {
   height: 3em;
   font-size: 1.1em;
   margin: 0.5em 0px;
+
 }
 
 .delete a {
 
   color: black;
 }
-
-
 
 
 

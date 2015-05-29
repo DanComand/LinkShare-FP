@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
   before_filter :ensure_logged_in, only: [:index, :create, :destroy]
-  
+
 
   def index
   	@bookmarks = current_user.bookmarks.order(created_at: :desc)
@@ -10,7 +10,7 @@ class BookmarksController < ApplicationController
   # 	@bookmark = Bookmark.find(params[:id])
 
   #   if current_user
-  #     # @note = @bookmark.notes.build 
+  #     # @note = @bookmark.notes.build
   #     @note = Note.new
   #   end
   # end
@@ -31,6 +31,7 @@ class BookmarksController < ApplicationController
     meta = MetaInspector.new(@bookmark.url)
     @bookmark.title = meta.title
     @bookmark.image = meta.images.best
+
 
   	if @bookmark.save
 
