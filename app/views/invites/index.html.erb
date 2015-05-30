@@ -2,7 +2,7 @@
 <p>Find me in app/views/invites/index.html.erb</p>
 <br>
 
-<%= @lists.each do |list| %>
+<% @lists.each do |list| %>
 
   <%= link_to list.name, "/lists/#{list.id}" %>
 

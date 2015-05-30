@@ -24,9 +24,10 @@
 					<h1>
 						<%= bookmark.title %>
 					</h1>
+						<p><%= bookmark.summary %></p>
 					<img src="<%= bookmark.image %>">
 				</a>
-					<%= bookmark.summary %>
+
 				<% if !bookmark.description.blank? %>
 					<p class="bookmark-description"><%= bookmark.description %></p>
 				<% end %>
