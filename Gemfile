@@ -28,7 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
 gem 'metainspector'
 
-gem 'carrierwave', :git => 'git@github.com:carrierwaveuploader/carrierwave.git'
+gem 'carrierwave'
 gem 'fog-aws'
 
 gem 'mini_magick'
